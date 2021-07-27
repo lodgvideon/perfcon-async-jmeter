@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.ws;
 
 import io.netty.channel.Channel;
 

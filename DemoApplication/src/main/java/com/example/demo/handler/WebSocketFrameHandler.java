@@ -1,6 +1,6 @@
 package com.example.demo.handler;
 
-import com.example.demo.ChannelService;
+import com.example.demo.ws.ChannelService;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.websocketx.WebSocketFrame;

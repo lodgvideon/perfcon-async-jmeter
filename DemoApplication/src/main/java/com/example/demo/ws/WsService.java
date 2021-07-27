@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.ws;
 
+import com.example.demo.model.DummyMessage;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.netty.channel.Channel;

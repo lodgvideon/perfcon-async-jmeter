@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.ws;
 
 import com.example.demo.handler.WebSocketServerInitializer;
 import io.netty.bootstrap.ServerBootstrap;
