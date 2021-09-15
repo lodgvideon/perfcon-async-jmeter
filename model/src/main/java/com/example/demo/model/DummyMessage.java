@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class DummyMessage {
     private String messageId;
     private long timestamp;
-    private String messsage;
+    private String message;
 }

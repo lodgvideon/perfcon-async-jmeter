@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 
 public final class MessageHolder {
-    private static final Object lock = new Object();
+
     public static final ConcurrentHashMap<String, DummyMessage> holder = new ConcurrentHashMap<>();
 
 

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>demo</artifactId>
+        <groupId>com.example</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>jmeter</artifactId>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>1</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>jmeter-plugin</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.lazerycode.jmeter</groupId>
+                <artifactId>jmeter-maven-plugin</artifactId>
+                <version>3.4.0</version>
+                <executions>
+<!--                    <execution>-->
+<!--                        <id>configuration</id>-->
+<!--                        <goals>-->
+<!--                            <goal>configure</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <testFilesIncluded>-->
+<!--                                <jMeterTestFile>PerfConf2021DummyProfile.jmx</jMeterTestFile>-->
+<!--                            </testFilesIncluded>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+
+<!--                    &lt;!&ndash; Run JMeter tests &ndash;&gt;-->
+<!--                    <execution>-->
+<!--                        <phase>verify</phase>-->
+<!--                        <id>jmeter-tests</id>-->
+<!--                        <goals>-->
+<!--                            <goal>jmeter</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+                </executions>
+
+
+                <configuration>
+                    <testFilesIncluded>
+                        <jMeterTestFile>PerfConf2021DummyProfile.jmx</jMeterTestFile>
+                    </testFilesIncluded>
+                    <jmeterExtensions>
+
+                        <extension>com.example:jmeter-plugin:0.0.1-SNAPSHOT</extension>
+                        <extension>com.example:model:0.0.1-SNAPSHOT</extension>
+                        <extension>io.netty:netty-all:4.1.53.Final</extension>
+                        <extension>org.projectlombok:lombok:${lombok.version}</extension>
+                    </jmeterExtensions>
+
+                    <jmeterVersion>${jmeter.version}</jmeterVersion>
+                    <jmeterArtifacts>
+                        <!--                        <jmeterArtifact></jmeterArtifact>-->
+                    </jmeterArtifacts>
+
+                    <downloadExtensionDependencies>true</downloadExtensionDependencies>
+                    <downloadJMeterDependencies>true</downloadJMeterDependencies>
+                    <downloadLibraryDependencies>false</downloadLibraryDependencies>
+                    <downloadOptionalDependencies>false</downloadOptionalDependencies>
+
+
+                    <testResultsTimestamp>false</testResultsTimestamp>
+                    <overrideRootLogLevel>INFO</overrideRootLogLevel>
+                    <suppressJMeterOutput>false</suppressJMeterOutput>
+                    <ignoreResultFailures>true</ignoreResultFailures>
+                    <guiTestFile>${project.basedir}/src/test/resources/PerfConf2021DummyProfile.jmx</guiTestFile>
+                    <propertiesJMeter>
+                        <encoding>UTF-8</encoding>
+                    </propertiesJMeter>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

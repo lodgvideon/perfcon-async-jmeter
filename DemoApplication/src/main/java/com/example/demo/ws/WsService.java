@@ -31,6 +31,7 @@ public class WsService {
     }
 
     public CompletableFuture sendMessageAsync(DummyMessage message) {
+        //
         return CompletableFuture.runAsync(() -> {
             sendMessage(message);
         }, commonThreadPoolExecutors);

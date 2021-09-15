@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @RestController
 public class WsController {
+    // Тут простой сервис для поиграть с WebSocketами
     private final WsService wsService;
 
     @Autowired

@@ -4,9 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
+        <module>model</module>
         <module>DemoApplication</module>
         <module>jmeter-plugin</module>
-        <module>model</module>
+        <module>jmeter</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -20,9 +21,21 @@
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
     <properties>
+        <jmeter.version>5.4.1</jmeter.version>
         <java.version>11</java.version>
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
