@@ -21,7 +21,7 @@
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
     <properties>
-        <jmeter.version>5.4.1</jmeter.version>
+        <jmeter.version>5.5</jmeter.version>
         <java.version>11</java.version>
     </properties>
 

@@ -28,7 +28,7 @@
             <plugin>
                 <groupId>com.lazerycode.jmeter</groupId>
                 <artifactId>jmeter-maven-plugin</artifactId>
-                <version>3.4.0</version>
+                <version>3.6.1</version>
                 <executions>
 <!--                    <execution>-->
 <!--                        <id>configuration</id>-->
@@ -61,7 +61,7 @@
 
                         <extension>com.example:jmeter-plugin:0.0.1-SNAPSHOT</extension>
                         <extension>com.example:model:0.0.1-SNAPSHOT</extension>
-                        <extension>io.netty:netty-all:4.1.53.Final</extension>
+                        <extension>io.netty:netty-all:4.1.85.Final</extension>
                         <extension>org.projectlombok:lombok:${lombok.version}</extension>
                     </jmeterExtensions>
 

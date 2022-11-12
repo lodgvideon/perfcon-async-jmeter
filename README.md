@@ -1,10 +1,11 @@
 # perfcon-async-jmeter
 # Русская версия
 Для запуска нам понадобится:
-JDK-11
+JDK-11. Все остальное mvnw установит самостоятельно.
 
- 1. Запускаем DemoApplication 
-	 >mvnv.cmd clean install spring-boot:run
+
+ 1. Запускаем DemoApplication на порту: 9102
+	 >make server
  
  Maven - очистит все папки, установит необходимые модули и запустит простой Rest-Service
  2. Запускаем Jmeter
